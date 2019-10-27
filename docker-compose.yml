@@ -1,0 +1,10 @@
+version: '2.3'
+services:
+  mmdetection:
+    image: aim/mmdetection
+    container_name: mmdetection
+    runtime: nvidia
+    shm_size: '8gb'
+    volumes:
+        - .:/app
+    command: bash -c 'while true; do echo test > /dev/null; sleep 1s; done'
